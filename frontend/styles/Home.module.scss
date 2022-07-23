@@ -89,11 +89,16 @@
     padding: 28px;
     border: 2px solid var(--header-secondary);
     border-radius: var(--border-radius-primary);
+    transition: transform .2s;
+    cursor: default;
 
     p {
         margin-top: 0;
         font-size: 19px;
         font-weight: 600;
+    }
+    &:hover {
+        transform: scale(1.05);
     }
 }
 
