@@ -3,7 +3,7 @@ import styles from '../../../styles/Home.module.scss';
 
 const ITEM_MAX_HEIGHT = 300;
 const ITEM_WIDTH = 15;
-const ITEM_SPACING = 2;
+const ITEM_SPACING = 0;
 export const HomeSorter = () => {
     const [mouseX, setMouseX] = useState(0);
     const [itemAmount, setItemAmount] = useState(0);
