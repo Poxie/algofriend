@@ -22,8 +22,12 @@
     display: flex;
     gap: 25px;
 }
-.header-button {
+.header-button-container {
     margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+.header-button {
     width: 200px;
 }
 .sorter {

@@ -9,9 +9,18 @@ export const HomeHeader = () => {
         <div className={styles['header']}>
             <HomeHeaderText />
             <HomeHeaderIcons />
-            <Button className={styles['header-button']}>
-                Explore more
-            </Button>
+
+            <div className={styles['header-button-container']}>
+                <Button 
+                    className={styles['header-button']}
+                    type={'secondary'}
+                >
+                    Go to algorithms
+                </Button>
+                <Button className={styles['header-button']}>
+                    Explore more
+                </Button>
+            </div>
 
             <HomeSorter />
         </div>
