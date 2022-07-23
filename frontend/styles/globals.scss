@@ -1,6 +1,11 @@
 :root {
   --background-primary: #fff;
   --background-secondary: #E1E1E1;
+  --button-background-primary: #0d4a59;
+  --button-background-primary-hover: #0a3844;
+  --button-background-secondary: #E1E1E1;
+  --button-background-secondary-hover: #b4b4b4;
+  --button-text-primary: #fff;
   --header-primary: #0d4a59;
   --header-secondary: #126D84;
   --text-primary: #1C1E21;
@@ -10,6 +15,7 @@
 
   --width-main: 1300px;
   --width-main-max: 90%;
+  --border-radius-primary: 10px;
 }
 
 html, body {
@@ -27,4 +33,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  font-weight: inherit;
+  font-size: inherit;
 }
