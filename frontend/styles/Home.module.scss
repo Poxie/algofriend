@@ -1,0 +1,16 @@
+.header {
+    width: 700px;
+    max-width: var(--width-main-max);
+    margin: 0 auto;
+
+    h2 {
+        font-size: 54px;
+        color: var(--header-primary);
+        text-align: center;
+    }
+}
+.header-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
