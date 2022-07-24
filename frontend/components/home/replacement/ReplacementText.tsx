@@ -29,7 +29,7 @@ export const ReplacementText = () => {
                 }, 50);
                 return newIndex;
             })
-        }, 6000);
+        }, 12000);
 
         return () => {
             clearInterval(interval);
