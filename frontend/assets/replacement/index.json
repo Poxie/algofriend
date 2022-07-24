@@ -1,0 +1,39 @@
+{
+    "texts": [
+        { "text": "YouTube", "content": "No more searching for up-to-date videos on YouTube. Just checkout our video explanations here instead of watching a fourty minute video on YouTube that isn’t even applicable for you.", "color": "#e23b1b" },
+        { "text": "Stack overflow", "content": "Stack overflow is very useful, but it can be a pain to find something useful. Quit spending hours search on Stack overflow.", "color": "#d98336" },
+        { "text": "Google", "content": "Google has it all, but yet it feels like it doesn't have enough. Endless hours spent Googling. Stop with the searching and start with the settling down.", "color": "#5886ee" }
+    ],
+    "trash": [
+        [
+            "How to algorithm?",
+            "Are algorithms important?",
+            "Can I algorithm?",
+            "Why use algorithms?"
+        ],
+        [
+            "How to use {algorithmName}?",
+            "Algorithm source code",
+            "Learn algorithms free",
+            "Where to learn algorithms?"
+        ],
+        [
+            "Can I create my own?",
+            "Are algorithms difficult?",
+            "How long to learn algorithms?",
+            "Are algorithms free?"
+        ],
+        [
+            "Famous algorithms",
+            "Learn algorithms online",
+            "What is an algorithm?",
+            "Is the internet real?"
+        ],
+        [
+            "How do algorithms work?",
+            "Do algorithms work?",
+            "Why do algorithms work?",
+            "Is AlgoFriend a good?"
+        ]
+    ]
+}
