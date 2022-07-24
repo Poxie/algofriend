@@ -234,6 +234,23 @@
     }
 }
 
+.footer {
+    background-color: var(--color-primary);
+    padding: 60px 0;
+    margin-top: -1px;
+    text-align: center;
+    color: var(--text-light-primary);
+
+    h5 {
+        margin: 0;
+        font-size: 32px;
+    }
+}
+.footer-button {
+    margin-top: 35px;
+    padding: 16px 40px;
+}
+
 @media (max-width: 800px) {
     .header {
         h2 {
