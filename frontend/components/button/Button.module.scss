@@ -8,10 +8,17 @@
 
     &.secondary {
         background-color: var(--button-background-secondary);
-        color: var(--text-primary);
 
         &:hover {
             background-color: var(--button-background-secondary-hover);
+        }
+    }
+    &.tertiary {
+        background-color: var(--button-background-tertiary);
+        color: var(--text-primary);
+
+        &:hover {
+            background-color: var(--button-background-tertiary-hover);
         }
     }
     &.default {

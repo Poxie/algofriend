@@ -5,7 +5,7 @@ export const Button: React.FC<{
     onClick?: () => void;
     disabled?: boolean;
     className?: string;
-    type?: 'default' | 'secondary' | 'hollow' | 'transparent';
+    type?: 'default' | 'secondary' | 'tertiary' | 'hollow' | 'transparent';
 }> = ({ children, onClick, disabled, className, type='default' }) => {
     className = [
         className ? className : '',

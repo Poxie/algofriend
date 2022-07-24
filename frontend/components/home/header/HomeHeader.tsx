@@ -13,7 +13,7 @@ export const HomeHeader = () => {
             <div className={styles['header-button-container']}>
                 <Button 
                     className={styles['header-button']}
-                    type={'secondary'}
+                    type={'tertiary'}
                 >
                     Go to algorithms
                 </Button>
