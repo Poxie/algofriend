@@ -251,6 +251,34 @@
     padding: 16px 40px;
 }
 
+@media (max-width: 850px) {
+    .replacement-main {
+        flex-direction: column;
+        padding: 70px 0;
+    }
+    .replacement-text {
+        padding: 0;
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .replacement-text-content {
+        width: unset !important;
+    }
+    .replacement-container {
+        overflow: hidden;
+        margin-top: 50px;
+    }
+    .replacement-container, .replacement-items {
+        width: 100%;
+    }
+    .replacement-items {
+        margin-left: 60px;
+    }
+    .replacement-icon {
+        left: 30px !important;
+    }
+}
 @media (max-width: 800px) {
     .header {
         h2 {
@@ -259,6 +287,18 @@
     }
     .about-cards {
         --row-amount: 2;
+    }
+}
+@media (max-width: 700px) {
+    .replacement-main {
+        align-items: unset;
+    }
+    .replacement-text-header {
+        flex-direction: column;
+    }
+    .addon-text {
+        margin-left: 0;
+        margin-bottom: 5px;
     }
 }
 @media (max-width: 600px) {
@@ -277,5 +317,13 @@
     }
     .about-cards {
         --row-amount: 1;
+    }
+    .footer {
+        h5 {
+            font-size: 26px;
+        }
+    }
+    .footer-button {
+        padding: 12px 30px;
     }
 }
