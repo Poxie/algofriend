@@ -115,6 +115,7 @@
 .replacement-main {
     display: flex;
     align-items: center;
+    padding: 70px 0;
 }
 .replacement-text {
     padding: 0 100px;
@@ -254,7 +255,6 @@
 @media (max-width: 850px) {
     .replacement-main {
         flex-direction: column;
-        padding: 70px 0;
     }
     .replacement-text {
         padding: 0;
