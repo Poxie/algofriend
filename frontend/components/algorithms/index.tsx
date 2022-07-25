@@ -8,7 +8,8 @@ export const Algorithms = () => {
 
     // Updating search params
     const updateSearch = (search: string) => {
-        router.replace(`/algorithms`, { query: search ? { search } : {} }, { shallow: true });
+        if(!search) return router.replace('/algorithms', undefined, { shallow: true });
+        router.replace(`/algorithms?search=${search}`, undefined, { shallow: true });
     }
 
     return(
