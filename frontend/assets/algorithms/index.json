@@ -1,16 +1,16 @@
 {
     "rows": [
         { "id": "sorting", "title": "Sorting", "items": [
-            { "title": "Quicksort", "content": "Quicksort divides large arrays into smaller arrays to quickly sort data", "timeComplexity": "O(n log(n))" },
-            { "title": "Bubble sort", "content": "Bubble sort compares elements next to each other and swap if they are in the wrong order.", "timeComplexity": "O(n)" },
-            { "title": "Selection sort", "content": "Selection sort divides the array into two parts. The sorted part and the yet to be sorted part.", "timeComplexity": "O(n²)" },
-            { "title": "Merge sort", "content": "Merge sort continously divides the array into smaller and smaller subarrays until each has one item.", "timeComplexity": "O(n log(n))" }
+            { "id": "quicksort",  "title": "Quicksort", "content": "Quicksort divides large arrays into smaller arrays to quickly sort data", "timeComplexity": "O(n log(n))" },
+            { "id": "bubble-sort", "title": "Bubble sort", "content": "Bubble sort compares elements next to each other and swap if they are in the wrong order.", "timeComplexity": "O(n)" },
+            { "id": "selection-sort", "title": "Selection sort", "content": "Selection sort divides the array into two parts. The sorted part and the yet to be sorted part.", "timeComplexity": "O(n²)" },
+            { "id": "merge-sort", "title": "Merge sort", "content": "Merge sort continously divides the array into smaller and smaller subarrays until each has one item.", "timeComplexity": "O(n log(n))" }
         ] },
         { "id": "pathfinding", "title": "Pathfinding", "items": [
-            { "title": "Dijkstra's", "content": "Dijkstra's algorithm uses a data structure for storing and querying partial solutions sorted by distance from the start.", "timeComplexity": "O(n²)" },
-            { "title": "Astar", "content": "Astar aims to find a path to the given goal node from the starting node having the shortest distance possible.", "timeComplexity": "O(n)" },
-            { "title": "Floyd-Warshall", "content": "The Floyd–Warshall algorithm compares all possible paths through the graph between each pair of vertices.", "timeComplexity": "O(n³)" },
-            { "title": "Minimum Spanning Tree", "content": "Minimum Spinning Tree starts from a given node, and finds all its reachable nodes with the minimum possible weight.", "timeComplexity": "O(n²)" }
+            { "id": "dijkstras", "title": "Dijkstra's", "content": "Dijkstra's algorithm uses a data structure for storing and querying partial solutions sorted by distance from the start.", "timeComplexity": "O(n²)" },
+            { "id": "astar", "title": "Astar", "content": "Astar aims to find a path to the given goal node from the starting node having the shortest distance possible.", "timeComplexity": "O(n)" },
+            { "id": "floyd-warshall", "title": "Floyd-Warshall", "content": "The Floyd–Warshall algorithm compares all possible paths through the graph between each pair of vertices.", "timeComplexity": "O(n³)" },
+            { "id": "minimum-spanning-tree", "title": "Minimum Spanning Tree", "content": "Minimum Spinning Tree starts from a given node, and finds all its reachable nodes with the minimum possible weight.", "timeComplexity": "O(n²)" }
         ] }
     ]
 }

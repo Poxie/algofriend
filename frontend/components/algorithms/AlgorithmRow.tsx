@@ -22,7 +22,8 @@ export const AlgorithmRow: React.FC<AlgorithmRowType> = ({ id, title, items }) =
                 {title}
             </h2>
 
-            <AlgorithmRowItems 
+            <AlgorithmRowItems
+                rowId={id} 
                 items={items} 
                 search={search}
                 titleContainsSearch={titleContainsSearch}

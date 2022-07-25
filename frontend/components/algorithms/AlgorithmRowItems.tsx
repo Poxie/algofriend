@@ -7,13 +7,14 @@ export const AlgorithmRowItems: React.FC<{
     items: AlgorithmItemType[];
     search: string;
     titleContainsSearch: boolean;
-}> = ({ items, search, titleContainsSearch }) => {
+    rowId: string;
+}> = ({ rowId, items, search, titleContainsSearch }) => {
     const filteredItems = items.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
     const visibleItems = titleContainsSearch ? items : filteredItems;
 
     return(
         <div className={styles['items']}>
-            {visibleItems.map(item => <AlgorithmItem {...item} key={item.title} />)}
+            {visibleItems.map(item => <AlgorithmItem {...item} rowId={rowId} key={item.title} />)}
         </div>
     )
 }
