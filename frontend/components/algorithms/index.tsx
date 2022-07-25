@@ -16,6 +16,7 @@ export const Algorithms = () => {
             <Input 
                 placeholder={'Search for algorithm...'}
                 onChange={updateSearch}
+                inputClassName={styles['input']}
             />
             <AlgoirthmList />
         </div>
