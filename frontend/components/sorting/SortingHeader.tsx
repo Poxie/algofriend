@@ -4,6 +4,7 @@ const items = [
     { title: 'Finished', color: 'lime' },
     { title: 'Correct order', color: 'lightblue' },
     { title: 'Incorrect order', color: 'red' },
+    { title: 'Reference color', color: 'yellow' },
     { title: 'Neutral', color: 'var(--color-secondary)' }
 ]
 export const SortingHeader = () => {
