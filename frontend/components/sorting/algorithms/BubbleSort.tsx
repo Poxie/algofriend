@@ -39,7 +39,7 @@ export const BubbleSort = () => {
             newItems[secondIndex] = tempItem;
             setItems(newItems);
             currentState.current = newItems;
-            await sleep(1000);
+            await sleep(currentDelay.current);
         }
 
         // Function to sort array
