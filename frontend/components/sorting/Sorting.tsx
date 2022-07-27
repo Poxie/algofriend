@@ -45,6 +45,7 @@ export const Sorting = () => {
         setStarted(false);
         setFinished(true);
         setActiveLines([]);
+        setDescription(`${algorithmData?.title} finished`)
     }
     // Starting visualization
     const start = () => {
