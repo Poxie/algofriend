@@ -17,6 +17,7 @@
   --text-light-secondary: #cccccc;
   --color-primary: #0d4a59;
   --color-secondary: #12596A;
+  --color-tertiary: #146e84;
   --sorting-color-primary: #FF7171;
   --sorting-color-secondary: #D75C5C;
   --sorting-color-hover: #ff6060;
@@ -30,12 +31,13 @@
   --width-main-max: 90%;
   --border-radius-primary: 10px;
   --border-radius-secondary: 8px;
+  --font-family-primary: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 html, body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-family-primary);
   background-color: var(--background-primary);
   color: var(--text-primary);
 }

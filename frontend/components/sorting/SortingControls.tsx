@@ -11,7 +11,7 @@ export const SortingControls = () => {
             <SortingRange 
                 label={'Array length'}
                 min={2}
-                max={100}
+                max={50}
                 onChange={amount => setItemAmount(parseInt(amount))}
                 value={itemAmount}
             />

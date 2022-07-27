@@ -4,7 +4,7 @@ import { Item } from "../types";
 
 const sleep = (delay: number) => new Promise(resolve => setTimeout(() => resolve({}), delay));
 export const BubbleSort = () => {
-    const { items, setItems, setActiveLines, started, delay, end } = useSorting();
+    const { items, setItems, setActiveLines, setDescription, started, delay, end } = useSorting();
     const currentState = useRef(items);
     const isStarted = useRef(started);
     const currentDelay = useRef(delay);
@@ -54,6 +54,7 @@ export const BubbleSort = () => {
                     setItems([...items]);
                     currentState.current = [...items];
                     setActiveLines([2]);
+                    setDescription(`Checking if ${current.value} > ${next.value}, If true, swap items.`);
                     
                     // Active style before error
                     await sleep(currentDelay.current);
@@ -83,6 +84,7 @@ export const BubbleSort = () => {
                     items[i] = next;
                     items[i + 1] = temp;
                     setActiveLines([3, 4, 5])
+                    setDescription(`Swapping position of ${current.value} and ${next.value}.`);
 
                     // Removing error styles
                     current.state = 'neutral';
@@ -109,6 +111,7 @@ export const BubbleSort = () => {
                 items[i].state = 'neutral';
                 items[i + 1].state = 'neutral';
                 setActiveLines([2])
+                setDescription(`Checking if ${current.value} > ${next.value}, If true, swap items.`);
             }
 
             // If all items are not sorted, run sort again

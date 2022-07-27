@@ -8,6 +8,8 @@ import { useRouter } from 'next/router';
 import { SortingControls } from './SortingControls';
 import { BubbleSort } from './algorithms/BubbleSort';
 import { SortingCode } from './SortingCode';
+import { getItemById } from '../../assets/algorithms/logic';
+import { AlgorithmCategories } from '../../assets/algorithms/types';
 
 const SortingContext = createContext({} as ContextType);
 
@@ -27,7 +29,8 @@ const getRandomItems = (count: number) => {
     return items;
 }
 export const Sorting = () => {
-    const { algorithmId } = useRouter().query as { algorithmId: string };
+    const { algorithmId, algorithmCategory } = useRouter().query as { algorithmId: string, algorithmCategory: AlgorithmCategories };
+    const algorithmData = getItemById(algorithmCategory, algorithmId);
     const [items, setItems] = useState<Item[]>([]);
     const [itemAmount, setItemAmount] = useState(40);
     const [started, setStarted] = useState(false);
@@ -35,6 +38,7 @@ export const Sorting = () => {
     const [delay, setDelay] = useState(500);
     const [width, setWidth] = useState(0);
     const [activeLines, setActiveLines] = useState<number[]>([]);
+    const [description, setDescription] = useState(algorithmData?.title || '');
 
     // Finishing visualization
     const end = () => {
@@ -80,6 +84,7 @@ export const Sorting = () => {
         delay,
         setDelay,
         setActiveLines,
+        setDescription,
         started,
         end,
         start,
@@ -103,7 +108,10 @@ export const Sorting = () => {
 
             <SortingDropdown />
             <SortingControls />
-            <SortingCode activeLines={activeLines} />
+            <SortingCode 
+                activeLines={activeLines}
+                description={description}
+            />
         </SortingContext.Provider>
     )
 }
