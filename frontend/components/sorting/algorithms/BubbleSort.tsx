@@ -56,6 +56,22 @@ export const BubbleSort = () => {
 
                 if(current.value > next.value) {
                     let temp = {...current};
+
+                    // Active style
+                    current.state = 'active';
+                    next.state = 'active';
+
+                    // Updating with active styles
+                    setItems([...items]);
+                    currentState.current = [...items];
+                    
+                    // Active style before error
+                    await sleep(currentDelay.current);
+
+                    // If visualization stops, stop animation
+                    if(!isStarted.current) {
+                        break;
+                    }
                     
                     // Setting error
                     current.state = 'error';
