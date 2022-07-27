@@ -39,7 +39,7 @@ export const Sorting = () => {
     const [delay, setDelay] = useState(500);
     const [width, setWidth] = useState(0);
     const [activeLines, setActiveLines] = useState<number[]>([]);
-    const [description, setDescription] = useState(algorithmData?.title || '');
+    const [description, setDescription] = useState(`${algorithmData?.title}`);
 
     // Finishing visualization
     const end = () => {
@@ -64,6 +64,7 @@ export const Sorting = () => {
         setStarted(false);
         setFinished(false);
         setActiveLines([]);
+        setDescription(`${algorithmData?.title}`)
         setItems(getRandomItems(itemAmount));
         setWidth(1000 / itemAmount);
     }, [itemAmount]);
