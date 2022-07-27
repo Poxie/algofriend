@@ -80,6 +80,8 @@ export const BubbleSort = () => {
                     next.animate = 'left';
 
                     // Updating with error styles
+                    setActiveLines([3, 4, 5])
+                    setDescription(`Swapping position of ${current.value} and ${next.value}.`);
                     setItems([...items]);
                     currentState.current = [...items];
 
@@ -100,8 +102,6 @@ export const BubbleSort = () => {
                     // Updating indices
                     items[i] = next;
                     items[i + 1] = temp;
-                    setActiveLines([3, 4, 5])
-                    setDescription(`Swapping position of ${current.value} and ${next.value}.`);
                 }
 
                 // Setting current item active styles
