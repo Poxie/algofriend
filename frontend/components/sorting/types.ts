@@ -6,8 +6,9 @@ export type ContextType = {
     itemAmount: number;
     setItemAmount: (amount: number) => void;
     started: boolean;
-    setStarted: (state: boolean) => void;
+    start: () => void;
     end: () => void;
+    stop: () => void;
 }
 export type Item = {
     state: 'done' | 'pivot' | 'active' | 'neutral' | 'error';

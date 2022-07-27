@@ -20,6 +20,13 @@ export const BubbleSort = () => {
         currentDelay.current = delay;
     }, [delay]);
 
+    // On unmount, pause algorithm
+    useEffect(() => {
+        return () => {
+            isStarted.current = false;
+        }
+    }, []);
+
     // Algorithm logic
     useEffect(() => {
         if(!started) return;
@@ -100,7 +107,6 @@ export const BubbleSort = () => {
             }
         }
         sort(currentState.current);
-
     }, [started]);
 
     return null;

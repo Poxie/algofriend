@@ -30,17 +30,30 @@ export const Sorting = () => {
     const [items, setItems] = useState<Item[]>([]);
     const [itemAmount, setItemAmount] = useState(40);
     const [started, setStarted] = useState(false);
+    const [finished, setFinished] = useState(false);
     const [delay, setDelay] = useState(500);
     const [width, setWidth] = useState(0);
 
-    // Ending visualization
+    // Finishing visualization
     const end = () => {
+        setStarted(false);
+        setFinished(true);
+    }
+    // Starting visualization
+    const start = () => {
+        if(finished) setItems(getRandomItems(itemAmount));
+        setStarted(true);
+        setFinished(false);
+    }
+    // Stopping visualization
+    const stop = () => {
         setStarted(false);
     }
 
     // Restarting visualization
     const restart = useCallback(() => {
         setStarted(false);
+        setFinished(false);
         setItems(getRandomItems(itemAmount));
     }, []);
 
@@ -68,8 +81,9 @@ export const Sorting = () => {
         delay,
         setDelay,
         started,
-        setStarted,
-        end
+        end,
+        start,
+        stop
     }
     return(
         <SortingContext.Provider value={value}>

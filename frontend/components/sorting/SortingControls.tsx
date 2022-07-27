@@ -4,7 +4,7 @@ import { useSorting } from './Sorting';
 import { SortingRange } from './SortingRange';
 
 export const SortingControls = () => {
-    const { itemAmount, setItemAmount, delay, setDelay, started, setStarted } = useSorting();
+    const { itemAmount, setItemAmount, delay, setDelay, started, start, stop } = useSorting();
 
     return(
         <div className={styles['controls']}>
@@ -19,7 +19,7 @@ export const SortingControls = () => {
             <Button 
                 type={'secondary'}
                 className={styles['button']}
-                onClick={() => setStarted(!started)}
+                onClick={started ? stop : start}
             >
                 {started ? 'Stop' : 'Start'} visualization
             </Button>
