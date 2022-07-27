@@ -15,4 +15,5 @@ export type ContextType = {
 export type Item = {
     state: 'done' | 'pivot' | 'active' | 'neutral' | 'error';
     value: number;
+    animate: null | 'left' | 'right';
 }

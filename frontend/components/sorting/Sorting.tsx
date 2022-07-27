@@ -23,7 +23,8 @@ const getRandomItems = (count: number) => {
         const number = Math.floor(Math.random() * MAX_HEIGHT);
         items.push({
             value: number,
-            state: 'neutral'
+            state: 'neutral',
+            animate: null
         })
     }
     return items;
@@ -102,6 +103,7 @@ export const Sorting = () => {
                     <SortingItem 
                         {...item}
                         width={width}
+                        delay={delay}
                         key={key}
                     />
                 ))}

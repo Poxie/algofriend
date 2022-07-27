@@ -96,6 +96,7 @@
 .item {
     background-color: var(--color-secondary);
     border-radius: 0 0 var(--border-radius-secondary) var(--border-radius-secondary);
+    transition: transform .3s;
     
     span {
         color: var(--text-light-primary);

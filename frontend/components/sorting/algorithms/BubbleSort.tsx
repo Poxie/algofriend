@@ -75,20 +75,33 @@ export const BubbleSort = () => {
                     // Allowing error styles to be visible
                     await sleep(currentDelay.current);
 
+                    // Setting animate values
+                    current.animate = 'right';
+                    next.animate = 'left';
+
+                    // Updating with error styles
+                    setItems([...items]);
+                    currentState.current = [...items];
+
+                    // Sleeping for animation
+                    await sleep(currentDelay.current);
+
                     // If visualization stops, stop animation
                     if(!isStarted.current) {
                         break;
                     }
+                    
+                    // Removing error styles
+                    current.state = 'neutral';
+                    next.state = 'neutral';
+                    current.animate = null;
+                    next.animate = null;
 
                     // Updating indices
                     items[i] = next;
                     items[i + 1] = temp;
                     setActiveLines([3, 4, 5])
                     setDescription(`Swapping position of ${current.value} and ${next.value}.`);
-
-                    // Removing error styles
-                    current.state = 'neutral';
-                    next.state = 'neutral';
                 }
 
                 // Setting current item active styles
