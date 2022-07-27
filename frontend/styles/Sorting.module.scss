@@ -8,6 +8,32 @@
     bottom: 25px;
     left: 25px;
 }
+.controls {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 18px 40px;
+    border-radius: 120px;
+    color: var(--text-light-primary);
+}
+.range-container {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 14px;
+
+    label {
+        margin-bottom: 3px;
+    }
+}
+.button {
+    padding: 10px 18px !important;
+}
 .items {
     display: flex;
     justify-content: center;
@@ -16,4 +42,17 @@
 .item {
     background-color: var(--color-secondary);
     border-radius: 0 0 var(--border-radius-secondary) var(--border-radius-secondary);
+
+    &.error {
+        background-color: red;
+    }
+    &.active {
+        background-color: lightblue;
+    }
+    &.done {
+        background-color: lime;
+    }
+    &.pivot {
+        background-color: yellow;
+    }
 }

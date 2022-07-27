@@ -5,6 +5,8 @@ import { SortingHeader } from "./SortingHeader";
 import { SortingItem } from "./SortingItem";
 import { ContextType, Item } from "./types";
 import { useRouter } from 'next/router';
+import { SortingControls } from './SortingControls';
+import { BubbleSort } from './algorithms/BubbleSort';
 
 const SortingContext = createContext({} as ContextType);
 
@@ -25,34 +27,54 @@ const getRandomItems = (count: number) => {
 }
 export const Sorting = () => {
     const { algorithmId } = useRouter().query as { algorithmId: string };
-    const [items, setItems] = useState<Item[]>(getRandomItems(40));
+    const [items, setItems] = useState<Item[]>([]);
     const [itemAmount, setItemAmount] = useState(40);
     const [started, setStarted] = useState(false);
-    const [delay, setDelay] = useState(0);
+    const [delay, setDelay] = useState(500);
     const [width, setWidth] = useState(0);
+
+    // Ending visualization
+    const end = () => {
+        setStarted(false);
+    }
 
     // Restarting visualization
     const restart = useCallback(() => {
         setStarted(false);
-        setItemAmount(40);
-        setItems(getRandomItems(40));
+        setItems(getRandomItems(itemAmount));
     }, []);
 
     // Resetting states on algorithm change
-    useEffect(restart, [algorithmId])
+    useEffect(restart, [algorithmId, itemAmount])
 
-    // Determining item width
+    // Determining item width and new creating items
     useEffect(() => {
         setWidth(1000 / itemAmount);
+        setItems(getRandomItems(itemAmount));
     }, [itemAmount]);
 
+    // Determining what algorithm to use
+    let algorithm = null;
+    switch(algorithmId) {
+        case 'bubble-sort':
+            algorithm = <BubbleSort />;
+    }
+
     const value = {
+        items,
         setItems,
+        itemAmount,
         setItemAmount,
-        setDelay
+        delay,
+        setDelay,
+        started,
+        setStarted,
+        end
     }
     return(
         <SortingContext.Provider value={value}>
+            {algorithm}
+
             <SortingHeader />
             
             <div className={styles['items']}>
@@ -66,6 +88,7 @@ export const Sorting = () => {
             </div>
 
             <SortingDropdown />
+            <SortingControls />
         </SortingContext.Provider>
     )
 }
