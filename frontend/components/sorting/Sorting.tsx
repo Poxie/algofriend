@@ -55,16 +55,11 @@ export const Sorting = () => {
         setStarted(false);
         setFinished(false);
         setItems(getRandomItems(itemAmount));
-    }, []);
+        setWidth(1000 / itemAmount);
+    }, [itemAmount]);
 
     // Resetting states on algorithm change
     useEffect(restart, [algorithmId, itemAmount])
-
-    // Determining item width and new creating items
-    useEffect(() => {
-        setWidth(1000 / itemAmount);
-        setItems(getRandomItems(itemAmount));
-    }, [itemAmount]);
 
     // Determining what algorithm to use
     let algorithm = null;

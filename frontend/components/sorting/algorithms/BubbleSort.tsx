@@ -45,11 +45,6 @@ export const BubbleSort = () => {
         // Function to sort array
         const sort = async (items: Item[]) => {
             for(let i = 0; i < items.length; i++) {
-                // If visualization stops, stop animation
-                if(!isStarted.current) {
-                    break;
-                }
-
                 let current = items[i];
                 let next = items[i + 1];
                 if(!next || next.state === 'done') {
@@ -73,6 +68,11 @@ export const BubbleSort = () => {
                     // Allowing error styles to be visible
                     await sleep(currentDelay.current);
 
+                    // If visualization stops, stop animation
+                    if(!isStarted.current) {
+                        break;
+                    }
+
                     // Updating indices
                     items[i] = next;
                     items[i + 1] = temp;
@@ -92,6 +92,11 @@ export const BubbleSort = () => {
 
                 // Allowing styles to be visible
                 await sleep(currentDelay.current);
+
+                // If visualization stops, stop animation
+                if(!isStarted.current) {
+                    break;
+                }
 
                 // Removing item active styles
                 items[i].state = 'neutral';
