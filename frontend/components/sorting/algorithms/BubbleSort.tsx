@@ -4,7 +4,7 @@ import { Item } from "../types";
 
 const sleep = (delay: number) => new Promise(resolve => setTimeout(() => resolve({}), delay));
 export const BubbleSort = () => {
-    const { items, setItems, started, delay, end } = useSorting();
+    const { items, setItems, setActiveLines, started, delay, end } = useSorting();
     const currentState = useRef(items);
     const isStarted = useRef(started);
     const currentDelay = useRef(delay);
@@ -31,17 +31,6 @@ export const BubbleSort = () => {
     useEffect(() => {
         if(!started) return;
 
-        // Function to swap item places
-        const swap = async (items: Item[], firstIndex: number, secondIndex: number) => {
-            const newItems = [...items];
-            const tempItem = newItems[firstIndex];
-            newItems[firstIndex] = newItems[secondIndex];
-            newItems[secondIndex] = tempItem;
-            setItems(newItems);
-            currentState.current = newItems;
-            await sleep(currentDelay.current);
-        }
-
         // Function to sort array
         const sort = async (items: Item[]) => {
             for(let i = 0; i < items.length; i++) {
@@ -64,6 +53,7 @@ export const BubbleSort = () => {
                     // Updating with active styles
                     setItems([...items]);
                     currentState.current = [...items];
+                    setActiveLines([2]);
                     
                     // Active style before error
                     await sleep(currentDelay.current);
@@ -92,6 +82,7 @@ export const BubbleSort = () => {
                     // Updating indices
                     items[i] = next;
                     items[i + 1] = temp;
+                    setActiveLines([3, 4, 5])
 
                     // Removing error styles
                     current.state = 'neutral';
@@ -117,6 +108,7 @@ export const BubbleSort = () => {
                 // Removing item active styles
                 items[i].state = 'neutral';
                 items[i + 1].state = 'neutral';
+                setActiveLines([2])
             }
 
             // If all items are not sorted, run sort again

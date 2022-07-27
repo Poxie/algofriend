@@ -2,7 +2,17 @@
     "rows": [
         { "id": "sorting", "title": "Sorting", "items": [
             { "id": "quicksort",  "title": "Quicksort", "content": "Quicksort divides large arrays into smaller arrays to quickly sort data", "timeComplexity": "O(n log(n))" },
-            { "id": "bubble-sort", "title": "Bubble sort", "content": "Bubble sort compares elements next to each other and swap if they are in the wrong order.", "timeComplexity": "O(n)" },
+            { "id": "bubble-sort", "title": "Bubble sort", "content": "Bubble sort compares elements next to each other and swap if they are in the wrong order.", "timeComplexity": "O(n)", "codeLines": [
+                { "code": "for(let i = 0; i < array.length; i++) {", "indentation": 0 },
+                { "code": "for(let j = 0; j < array.length - i - 1; j++) {", "indentation": 1 },
+                { "code": "if(array[j] > array[j + 1]) {", "indentation": 2 },
+                { "code": "const temp = array[j];", "indentation": 3 },
+                { "code": "array[j] = array[j + 1];", "indentation": 3 },
+                { "code": "array[j + 1] = temp;", "indentation": 3 },
+                { "code": "}", "indentation": 2 },
+                { "code": "}", "indentation": 1 },
+                { "code": "}", "indentation": 0 }
+            ] },
             { "id": "selection-sort", "title": "Selection sort", "content": "Selection sort divides the array into two parts. The sorted part and the yet to be sorted part.", "timeComplexity": "O(n²)" },
             { "id": "merge-sort", "title": "Merge sort", "content": "Merge sort continously divides the array into smaller and smaller subarrays until each has one item.", "timeComplexity": "O(n log(n))" }
         ] },

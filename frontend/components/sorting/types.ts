@@ -6,6 +6,7 @@ export type ContextType = {
     itemAmount: number;
     setItemAmount: (amount: number) => void;
     started: boolean;
+    setActiveLines: (lines: number[]) => void;
     start: () => void;
     end: () => void;
     stop: () => void;

@@ -7,6 +7,7 @@ import { ContextType, Item } from "./types";
 import { useRouter } from 'next/router';
 import { SortingControls } from './SortingControls';
 import { BubbleSort } from './algorithms/BubbleSort';
+import { SortingCode } from './SortingCode';
 
 const SortingContext = createContext({} as ContextType);
 
@@ -33,6 +34,7 @@ export const Sorting = () => {
     const [finished, setFinished] = useState(false);
     const [delay, setDelay] = useState(500);
     const [width, setWidth] = useState(0);
+    const [activeLines, setActiveLines] = useState<number[]>([]);
 
     // Finishing visualization
     const end = () => {
@@ -75,6 +77,7 @@ export const Sorting = () => {
         setItemAmount,
         delay,
         setDelay,
+        setActiveLines,
         started,
         end,
         start,
@@ -98,6 +101,7 @@ export const Sorting = () => {
 
             <SortingDropdown />
             <SortingControls />
+            <SortingCode activeLines={activeLines} />
         </SortingContext.Provider>
     )
 }

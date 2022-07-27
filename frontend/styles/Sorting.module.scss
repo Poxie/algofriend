@@ -36,6 +36,23 @@
     border-radius: 120px;
     color: var(--text-light-primary);
 }
+.code {
+    border-radius: var(--border-radius-primary);
+    background-color: var(--color-primary);
+    color: var(--text-light-primary);
+    font-size: 16px;
+    padding: 16px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.active-line {
+    background-color: var(--color-secondary);
+    border-radius: 4px;
+}
 .range-container {
     display: flex;
     flex-direction: column;
