@@ -2,6 +2,21 @@
     height: 70px;
     background-color: var(--color-primary);
     color: var(--text-light-primary);
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+.header-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.header-color {
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
 }
 .dropdown {
     position: fixed !important;
