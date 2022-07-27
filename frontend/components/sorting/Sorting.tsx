@@ -40,6 +40,7 @@ export const Sorting = () => {
     const end = () => {
         setStarted(false);
         setFinished(true);
+        setActiveLines([]);
     }
     // Starting visualization
     const start = () => {
@@ -56,6 +57,7 @@ export const Sorting = () => {
     const restart = useCallback(() => {
         setStarted(false);
         setFinished(false);
+        setActiveLines([]);
         setItems(getRandomItems(itemAmount));
         setWidth(1000 / itemAmount);
     }, [itemAmount]);
